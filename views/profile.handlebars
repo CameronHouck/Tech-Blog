@@ -41,8 +41,8 @@
     </form>
   </div>
 
-  {{#if projects.length}}
-    <div class="col-md-6 project-list">
+  <div class="col-md-6 project-list">
+    {{#if projects.length}}
       <h3>Current Projects:</h3>
 
       {{#each projects as |project|}}
@@ -58,8 +58,8 @@
           </div>
         </div>
       {{/each}}
-    </div>
-  {{/if}}
+    {{/if}}
+  </div>
 </div>
 
 <script src="./js/profile.js"></script>
