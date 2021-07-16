@@ -3,38 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fund My Project!</title>
+    <title>MVC Tech Blog</title>
     <link rel="stylesheet" href="/css/jass.css" />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
-    <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
-        <h1>
-          <span role="img" aria-label="money">$</span>
-          <a href="/">Fund My Project!</a>
-        </h1>
-        <nav>
-          {{#if logged_in}}
-            <a href="/profile">profile</a>
-            |
-            <button class="no-button" id="logout">logout</button>
-          {{else}}
-            <a href="/login">login</a>
-          {{/if}}
-        </nav>
-      </header>
-      <main class="container container-fluid mt-5">
-        {{{body}}}
-      </main>
-      <footer>
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        MVC Blog! Talk about Tech!
+      </h1>
+      <nav>
+        <button class="btn"><a class="nav-link" href="/login">Login</a></button>
+      </nav>
+      <nav>
+        <button class="btn"><a
+            class="nav-link"
+            href="/profile"
+          >Profile</a></button>
+      </nav>
+      <nav>
+        <button class="btn"><a
+            class="nav-link"
+            href="/homepage"
+          >Home</a></button>
+      </nav>
+      <nav>
+        <button class="btn"><a
+            class="nav-link"
+            href="/logout"
+          >Logout</a></button>
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      {{{body}}}
+    </main>
+    <footer>
 
-      </footer>
-    </div>
+    </footer>
+
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
+    {{#unless logged_in}}
+      <script src="/js/login.js"></script>
+    {{/unless}}
+
   </body>
 
 </html>
