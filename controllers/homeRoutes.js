@@ -3,7 +3,7 @@ const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
-  console.log("hey getting homepage")
+  console.log("hey getting homepage");
   try {
     // Get all projects and JOIN with user data
     const postData = await Post.findAll({
@@ -41,7 +41,7 @@ router.get("/post/:id", async (req, res) => {
     });
 
     const post = postData.get({ plain: true });
-console.log(post,"test")
+    console.log(post, "test");
     res.render("post", {
       ...post,
       logged_in: req.session.logged_in,
@@ -83,6 +83,14 @@ router.get("/login", (req, res) => {
   }
 
   res.render("login");
+});
+
+router.get("/logout", (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy();
+    res.render("login");
+    return;
+  }
 });
 
 router.get("/signup", (req, res) => {
