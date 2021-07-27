@@ -13,6 +13,25 @@ header,
   font-size: 100%;
 }
 
+#logintext {
+  font-size: 25px;
+}
+
+#signuptext {
+  font-size: 25px;
+}
+
+#headertext {
+  font-size: 30px;
+}
+
+#title {
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+}
+
 .no-button:hover {
   color: #0d628a;
   text-decoration: underline;
@@ -26,4 +45,27 @@ header,
 
 html {
   background-color: #b1b64c;
+}
+
+h1 {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  background-color: red;
+  border-radius: 10px;
+}
+
+h3 {
+  background-color: blue;
+  border-radius: 10px;
+}
+
+h4 {
+  background-color: green;
+  border-radius: 10px;
 }
