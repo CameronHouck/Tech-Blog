@@ -23,8 +23,12 @@ tech blog
 a blog for you to talk about teck and upload and save posts!
 
 ## Demo
+![alt text](https://media.discordapp.net/attachments/864181115334033488/872242407914217532/unknown.png?width=1440&height=523)
+![alt text](https://media.discordapp.net/attachments/864181115334033488/872242874761224292/unknown.png?width=1440&height=436)
 
+## Deployable Link
 
+https://salty-dusk-85207.herokuapp.com/profile
   
 ## Installation
   
